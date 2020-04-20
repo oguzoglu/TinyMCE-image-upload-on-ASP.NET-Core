@@ -4,6 +4,7 @@
 <form method="post">
       <textarea id="mytextarea">Hello, World!</textarea>
 </form>
+<script src="/js/init.js"></script>
 ```
 - Copy init.js to your wwroot directory
 ```javascript
