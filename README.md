@@ -1,5 +1,22 @@
 # TinyMCE-image-upload-on-ASP.NET-Core
+- add html codes below to your view
+```html
+<form method="post">
+      <textarea id="mytextarea">Hello, World!</textarea>
+</form>
+```
 - Copy init.js to your wwroot directory
+```javascript
+<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+tinymce.init({
+  selector: 'textarea',
+  plugins: 'code image link media codesample',
+  toolbar: 'insertfile | undo redo | link image media | code | codesample',
+  height: 400,
+  images_upload_url: "/EditorUpload/Post",
+});
+```
+- Copy EditorUploadController.cs to your controller directory
      ```csharp
      public class EditorUploadController : Controller
     {
@@ -76,11 +93,4 @@
         }
     }
      ```
-- Copy EditorUploadController.cs to your controller directory
-add html codes below to your view
-```html
-<form method="post">
-      <textarea id="mytextarea">Hello, World!</textarea>
-</form>
-```
     
