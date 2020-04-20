@@ -1,0 +1,1 @@
+# TinyMCE-image-upload-on-ASP.NET-Core
