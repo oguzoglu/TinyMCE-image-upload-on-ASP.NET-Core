@@ -1,8 +1,8 @@
 # TinyMCE-image-upload-on-ASP.NET-Core
 - Copy init.js to your wwroot directory
-      ```csharp
-      public class EditorUploadController : Controller
-      {
+     ```csharp
+     public class EditorUploadController : Controller
+    {
         private readonly IWebHostEnvironment _hostingEnvironment;
 
         public EditorUploadController(IWebHostEnvironment hostingEnvironment)
@@ -67,18 +67,15 @@
                     location.Add("location", "/uploads/" + name);
                     return Json(location);
                 }
-
                 throw new ArgumentException("The image did not pass the validation");
             }
-
             catch (ArgumentException ex)
             {
                 return Json(ex.Message);
             }
         }
     }
-    
-      ```
+     ```
 - Copy EditorUploadController.cs to your controller directory
 add html codes below to your view
 ```html
